@@ -24,3 +24,6 @@ yarn-error.log*
 
 # ─── Misc ───────────────────────────────────────────────────
 .github/instructions/codacy.instructions.md
+
+# --- Debug Scripts ---
+test-seed.ts
