@@ -11,7 +11,10 @@ const { apiUrl: BASE_URL } = await initializeApi();
  * Generic fetch wrapper for API calls.
  */
 async function apiFetch<T>(endpoint: string, options?: RequestInit): Promise<T> {
-    const url = `${BASE_URL}${endpoint}`;
+    const safeBaseUrl = BASE_URL.replace(/\/$/, "");
+    const safeEndpoint = endpoint.startsWith("/") ? endpoint : `/${endpoint}`;
+    const url = `${safeBaseUrl}${safeEndpoint}`.replace(/([^:]\/)\/+/g, "$1"); // Collapse double slashes except after http://
+    
     const response = await fetch(url, {
         ...options,
         headers: {
