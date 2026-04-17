@@ -23,9 +23,9 @@ const envPort = process.env.PORT || 5000;
 const isDev = process.env.NODE_ENV === 'development';
 
 app.get('/config', (req, res) => {
-  const apiBaseUrl = isDev
-    ? '/api'
-    : `https://${process.env.DOMAIN_NAME?.replace('https://', '')}/api`;
+  const apiBaseUrl = process.env.DOMAIN_NAME
+    ? `https://${process.env.DOMAIN_NAME.replace('https://', '')}/api`
+    : '/api';
 
   res.json({
     apiUrl: apiBaseUrl,
