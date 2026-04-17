@@ -1,0 +1,202 @@
+/* ================================================================
+   animations.css — Keyframes and Transitions
+   ================================================================ */
+
+/* Card Entrance Cascade */
+.book-card {
+  animation: cardScaleIn 0.45s var(--transition) backwards;
+}
+
+/* Stagger indices assuming up to 20 cards */
+.book-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.book-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.book-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.book-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.book-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.book-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.book-card:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.book-card:nth-child(8) {
+  animation-delay: 0.4s;
+}
+
+.book-card:nth-child(9) {
+  animation-delay: 0.45s;
+}
+
+@keyframes cardScaleIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Toast Notifications ── */
+#toast-container {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  padding: 16px 24px;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  animation: toastIn 0.35s var(--transition) forwards, toastOut 0.4s ease 3s forwards;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toast.success {
+  background: rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.toast.error {
+  background: rgba(244, 63, 94, 0.25);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+}
+
+.toast.info {
+  background: var(--accent-soft);
+  border: 1px solid rgba(138, 99, 255, 0.4);
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateX(60px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes toastOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+  }
+}
+
+/* ── Delete Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 440px;
+  width: 90%;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+  animation: modalPop 0.35s var(--transition) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.modal p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}

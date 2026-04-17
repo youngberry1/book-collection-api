@@ -1,0 +1,119 @@
+/* ================================================================
+   layout.css — Structural Grid & Flexbox
+   ================================================================ */
+
+/* ── Mesh Background Effect ── */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(138, 99, 255, 0.08), transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(138, 99, 255, 0.05), transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ── Header ── */
+#header {
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  padding: 48px 24px 36px;
+  text-align: center;
+  background: var(--bg-elevated);
+  backdrop-filter: var(--blur-lg);
+  -webkit-backdrop-filter: var(--blur-lg);
+  z-index: 10;
+}
+
+#header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: var(--text-dim);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* ── Main Layout (Desktop) ── */
+.main-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 32px;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  min-height: calc(100vh - 150px);
+}
+
+/* ── Sidebar ── */
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* Sticky Scrolling */
+  position: sticky;
+  top: 110px;
+  height: max-content;
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Sidebar Scrollbar adjustment */
+#sidebar::-webkit-scrollbar { width: 4px; }
+
+/* ── Content Area ── */
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: var(--bg-elevated);
+  padding: 16px 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+}
+
+.view-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#page-info {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  font-weight: 600;
+  min-width: 110px;
+  text-align: center;
+}
+
+/* ── Book Grid ── */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}

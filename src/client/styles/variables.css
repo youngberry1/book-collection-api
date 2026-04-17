@@ -1,0 +1,55 @@
+/* ================================================================
+   variables.css — Premium Design Tokens
+   ================================================================ */
+
+:root {
+  /* Core Colors */
+  --bg-deep:           #0a0a0f;
+  --bg-elevated:       rgba(22, 22, 30, 0.65);
+  --bg-card:           rgba(28, 28, 39, 0.45);
+  --bg-input:          rgba(34, 34, 46, 0.8);
+  
+  /* Borders */
+  --border:            rgba(255, 255, 255, 0.08);
+  --border-light:      rgba(255, 255, 255, 0.15);
+  --border-focus:      #9d7cff;
+  
+  /* Typography */
+  --text:              #f4f4f9;
+  --text-dim:          #a1a1bc;
+  --text-muted:        #6b6b85;
+  --font-main:         'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Accent Colors (Vibrant Purple/Gold) */
+  --accent:            #8a63ff;
+  --accent-hover:      #a282ff;
+  --accent-glow:       rgba(138, 99, 255, 0.4);
+  --accent-soft:       rgba(138, 99, 255, 0.15);
+  --accent-gradient:   linear-gradient(135deg, #b091ff 0%, #7c5cfc 100%);
+  
+  /* Action Colors */
+  --success:           #10b981;
+  --success-glow:      rgba(16, 185, 129, 0.3);
+  --danger:            #f43f5e;
+  --danger-glow:       rgba(244, 63, 94, 0.3);
+  --warning:           #f59e0b;
+  --warning-soft:      rgba(245, 158, 11, 0.15);
+  
+  /* Structural Tokens */
+  --radius-sm:         8px;
+  --radius:            12px;
+  --radius-lg:         20px;
+  --radius-pill:       9999px;
+  
+  /* Deep Shadows & Blurs */
+  --shadow-sm:         0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow:            0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow:       0 0 20px var(--accent-glow);
+  --blur-md:           blur(12px);
+  --blur-lg:           blur(24px);
+  
+  /* Timings */
+  --transition-fast:   0.15s ease-out;
+  --transition:        0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-slow:   0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}

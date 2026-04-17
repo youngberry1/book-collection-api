@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Book Collection manager — browse, add, edit, and delete books via REST API.">
+  <title>Book Collection — API Dashboard</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/client/styles/main.css">
+</head>
+
+<body>
+
+  <!-- ─── Toast Container ────────────────────────────────── -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ─── Header ─────────────────────────────────────────── -->
+  <header id="header">
+    <div class="header-inner">
+      <h1>📚 Book Collection</h1>
+      <p class="subtitle">Full REST API Dashboard &mdash; Browse, Create, Edit &amp; Delete</p>
+    </div>
+  </header>
+
+  <!-- ─── Main ───────────────────────────────────────────── -->
+  <main class="main-layout">
+
+    <!-- ─── Sidebar (forms) ────────────────────────────── -->
+    <aside id="sidebar">
+
+      <!-- Search by ID -->
+      <section class="panel" id="panel-search">
+        <h2>🔍 Find Book by ID</h2>
+        <form id="search-form" autocomplete="off">
+          <input type="text" id="search-id" placeholder="Paste a book _id…" required>
+          <button type="submit" class="btn btn-accent">Search</button>
+        </form>
+        <div id="search-result" class="search-result hidden"></div>
+      </section>
+
+      <!-- Create / Edit form -->
+      <section class="panel" id="panel-form">
+        <h2 id="form-heading">➕ Add New Book</h2>
+        <form id="book-form" autocomplete="off">
+          <input type="hidden" id="form-book-id">
+
+          <label for="form-title">Title</label>
+          <input type="text" id="form-title" placeholder="e.g. The Great Gatsby" required>
+
+          <label for="form-author">Author</label>
+          <input type="text" id="form-author" placeholder="e.g. F. Scott Fitzgerald" required>
+
+          <label for="form-pages">Pages</label>
+          <input type="number" id="form-pages" placeholder="e.g. 180" min="1" required>
+
+          <label for="form-rating">Rating (0–10)</label>
+          <input type="number" id="form-rating" placeholder="e.g. 8" min="0" max="10" step="0.1" required>
+
+          <label for="form-genres">Genres <span class="hint">(comma-separated)</span></label>
+          <input type="text" id="form-genres" placeholder="e.g. Fiction, Classic" required>
+
+          <label for="form-reviews">Reviews <span class="hint">(optional, JSON array)</span></label>
+          <textarea id="form-reviews" rows="3" placeholder='[{"name":"Alice","body":"Great!"}]'></textarea>
+
+          <div class="form-actions">
+            <button type="submit" id="form-submit-btn" class="btn btn-primary">Create Book</button>
+            <button type="button" id="form-cancel-btn" class="btn btn-ghost hidden">Cancel</button>
+          </div>
+
+          <!-- Mode toggle: PATCH vs PUT -->
+          <div id="edit-mode-toggle" class="hidden">
+            <span class="hint">Update mode:</span>
+            <label class="toggle-label">
+              <input type="radio" name="editMode" value="patch" checked> PATCH <span class="hint">(partial)</span>
+            </label>
+            <label class="toggle-label">
+              <input type="radio" name="editMode" value="put"> PUT <span class="hint">(full replace)</span>
+            </label>
+          </div>
+        </form>
+      </section>
+    </aside>
+
+    <!-- ─── Content (book list) ────────────────────────── -->
+    <section id="content">
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="view-controls">
+          <button id="btn-view-all" class="btn btn-sm btn-accent active" title="Load all books (no pagination)">All Books</button>
+          <button id="btn-view-paginated" class="btn btn-sm btn-ghost" title="Load books with pagination">Paginated</button>
+          <button id="btn-reset-db" class="btn btn-sm btn-ghost reset-btn" title="Restore Data">🔄 Reset</button>
+        </div>
+
+        <div id="pagination-controls" class="pagination hidden">
+          <button id="page-prev" class="btn btn-sm btn-ghost" disabled>&larr; Prev</button>
+          <span id="page-info">Page 1</span>
+          <button id="page-next" class="btn btn-sm btn-ghost">Next &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Book Grid -->
+      <div id="book-list" class="book-grid"></div>
+
+      <!-- Loading / Empty -->
+      <div id="status" class="status-message">
+        <div class="loader"></div>
+        <span>Loading books…</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── Confirm Delete Modal ───────────────────────────── -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h3>🗑️ Confirm Delete</h3>
+      <p id="modal-text">Are you sure you want to delete this book?</p>
+      <div class="modal-actions">
+        <button id="modal-cancel" class="btn btn-ghost">Cancel</button>
+        <button id="modal-confirm" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/client/script.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,635 @@
+[{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce101f8"
+  },
+  "title": "Brave New World",
+  "author": "Aldous Huxley",
+  "pages": 311,
+  "rating": 8,
+  "genres": [
+    "dystopian",
+    "sci-fi"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce101f9"
+  },
+  "title": "The Hobbit",
+  "author": "J.R.R. Tolkien",
+  "pages": 310,
+  "rating": 9,
+  "genres": [
+    "fantasy",
+    "adventure"
+  ],
+  "reviews": [
+    {
+      "name": "Sam",
+      "body": "A wonderful start to Middle-Earth."
+    },
+    {
+      "name": "Frodo",
+      "body": "Very nostalgic."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce101fa"
+  },
+  "title": "The Fellowship of the Ring",
+  "author": "J.R.R. Tolkien",
+  "pages": 423,
+  "rating": 10,
+  "genres": [
+    "fantasy",
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce101fb"
+  },
+  "title": "The Two Towers",
+  "author": "J.R.R. Tolkien",
+  "pages": 352,
+  "rating": 9,
+  "genres": [
+    "fantasy",
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce101fc"
+  },
+  "title": "The Return of the King",
+  "author": "J.R.R. Tolkien",
+  "pages": 416,
+  "rating": 10,
+  "genres": [
+    "fantasy",
+    "adventure"
+  ],
+  "reviews": [
+    {
+      "name": "Gandalf",
+      "body": "A perfect conclusion."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce101fd"
+  },
+  "title": "Foundation",
+  "author": "Isaac Asimov",
+  "pages": 255,
+  "rating": 8,
+  "genres": [
+    "sci-fi",
+    "classic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce101fe"
+  },
+  "title": "Neuromancer",
+  "author": "William Gibson",
+  "pages": 271,
+  "rating": 8,
+  "genres": [
+    "sci-fi",
+    "cyberpunk"
+  ],
+  "reviews": [
+    {
+      "name": "Neo",
+      "body": "Ahead of its time."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce101ff"
+  },
+  "title": "Snow Crash",
+  "author": "Neal Stephenson",
+  "pages": 480,
+  "rating": 8,
+  "genres": [
+    "sci-fi",
+    "cyberpunk",
+    "comedy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10200"
+  },
+  "title": "The Hitchhiker's Guide to the Galaxy",
+  "author": "Douglas Adams",
+  "pages": 193,
+  "rating": 10,
+  "genres": [
+    "sci-fi",
+    "comedy"
+  ],
+  "reviews": [
+    {
+      "name": "Arthur",
+      "body": "Don't panic!"
+    },
+    {
+      "name": "Ford",
+      "body": "Mostly harmless."
+    },
+    {
+      "name": "Trillian",
+      "body": "Highly amusing."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10201"
+  },
+  "title": "Pride and Prejudice",
+  "author": "Jane Austen",
+  "pages": 432,
+  "rating": 9,
+  "genres": [
+    "romance",
+    "classic"
+  ],
+  "reviews": [
+    {
+      "name": "Elizabeth",
+      "body": "A witty masterpiece."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10202"
+  },
+  "title": "Sense and Sensibility",
+  "author": "Jane Austen",
+  "pages": 350,
+  "rating": 8,
+  "genres": [
+    "romance",
+    "classic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10203"
+  },
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "pages": 281,
+  "rating": 10,
+  "genres": [
+    "classic",
+    "historical fiction",
+    "drama"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10204"
+  },
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "pages": 180,
+  "rating": 7,
+  "genres": [
+    "classic",
+    "tragedy"
+  ],
+  "reviews": [
+    {
+      "name": "Jay",
+      "body": "Beautiful prose, sad story."
+    },
+    {
+      "name": "Nick",
+      "body": "Overrated in my opinion."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10205"
+  },
+  "title": "Moby-Dick",
+  "author": "Herman Melville",
+  "pages": 635,
+  "rating": 6,
+  "genres": [
+    "classic",
+    "adventure"
+  ],
+  "reviews": [
+    {
+      "name": "Ahab",
+      "body": "It's too long."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10206"
+  },
+  "title": "Fahrenheit 451",
+  "author": "Ray Bradbury",
+  "pages": 158,
+  "rating": 8,
+  "genres": [
+    "dystopian",
+    "sci-fi"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10207"
+  },
+  "title": "The Martian",
+  "author": "Andy Weir",
+  "pages": 369,
+  "rating": 9,
+  "genres": [
+    "sci-fi",
+    "adventure",
+    "survival"
+  ],
+  "reviews": [
+    {
+      "name": "Mark W.",
+      "body": "Very scientifically accurate."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10208"
+  },
+  "title": "Project Hail Mary",
+  "author": "Andy Weir",
+  "pages": 496,
+  "rating": 9,
+  "genres": [
+    "sci-fi",
+    "adventure",
+    "mystery"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10209"
+  },
+  "title": "Good Omens",
+  "author": "Terry Pratchett",
+  "pages": 412,
+  "rating": 9,
+  "genres": [
+    "fantasy",
+    "comedy"
+  ],
+  "reviews": [
+    {
+      "name": "Crowley",
+      "body": "Hilarious collaboration."
+    },
+    {
+      "name": "Aziraphale",
+      "body": "Quite charming."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce1020a"
+  },
+  "title": "Mort",
+  "author": "Terry Pratchett",
+  "pages": 272,
+  "rating": 9,
+  "genres": [
+    "fantasy",
+    "comedy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce1020b"
+  },
+  "title": "Guards! Guards!",
+  "author": "Terry Pratchett",
+  "pages": 376,
+  "rating": 10,
+  "genres": [
+    "fantasy",
+    "comedy",
+    "mystery"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce1020c"
+  },
+  "title": "The Hunger Games",
+  "author": "Suzanne Collins",
+  "pages": 374,
+  "rating": 8,
+  "genres": [
+    "dystopian",
+    "adventure",
+    "young adult"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce1020d"
+  },
+  "title": "Catching Fire",
+  "author": "Suzanne Collins",
+  "pages": 391,
+  "rating": 8,
+  "genres": [
+    "dystopian",
+    "adventure",
+    "young adult"
+  ],
+  "reviews": [
+    {
+      "name": "Katniss",
+      "body": "A solid sequel."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce1020e"
+  },
+  "title": "Sapiens: A Brief History of Humankind",
+  "author": "Yuval Noah Harari",
+  "pages": 443,
+  "rating": 9,
+  "genres": [
+    "non-fiction",
+    "history",
+    "science"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce1020f"
+  },
+  "title": "Thinking, Fast and Slow",
+  "author": "Daniel Kahneman",
+  "pages": 499,
+  "rating": 8,
+  "genres": [
+    "non-fiction",
+    "psychology",
+    "science"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10210"
+  },
+  "title": "Outliers",
+  "author": "Malcolm Gladwell",
+  "pages": 309,
+  "rating": 7,
+  "genres": [
+    "non-fiction",
+    "sociology",
+    "psychology"
+  ],
+  "reviews": [
+    {
+      "name": "Tom",
+      "body": "Interesting concepts, but dragged on."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10211"
+  },
+  "title": "The Alchemist",
+  "author": "Paulo Coelho",
+  "pages": 163,
+  "rating": 7,
+  "genres": [
+    "fantasy",
+    "philosophy",
+    "adventure"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10212"
+  },
+  "title": "Words of Radiance",
+  "author": "Brandon Sanderson",
+  "pages": 1087,
+  "rating": 10,
+  "genres": [
+    "fantasy",
+    "epic"
+  ],
+  "reviews": [
+    {
+      "name": "Kaladin",
+      "body": "Just wow."
+    },
+    {
+      "name": "Shallan",
+      "body": "An incredible journey."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10213"
+  },
+  "title": "Oathbringer",
+  "author": "Brandon Sanderson",
+  "pages": 1248,
+  "rating": 9,
+  "genres": [
+    "fantasy",
+    "epic"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10214"
+  },
+  "title": "Rhythm of War",
+  "author": "Brandon Sanderson",
+  "pages": 1232,
+  "rating": 9,
+  "genres": [
+    "fantasy",
+    "epic"
+  ],
+  "reviews": [
+    {
+      "name": "Dalinar",
+      "body": "A bit slow in the middle, but great."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10215"
+  },
+  "title": "A Game of Thrones",
+  "author": "George R.R. Martin",
+  "pages": 694,
+  "rating": 9,
+  "genres": [
+    "fantasy",
+    "political fiction",
+    "drama"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10216"
+  },
+  "title": "A Clash of Kings",
+  "author": "George R.R. Martin",
+  "pages": 768,
+  "rating": 9,
+  "genres": [
+    "fantasy",
+    "political fiction",
+    "drama"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10217"
+  },
+  "title": "A Storm of Swords",
+  "author": "George R.R. Martin",
+  "pages": 973,
+  "rating": 10,
+  "genres": [
+    "fantasy",
+    "political fiction",
+    "drama"
+  ],
+  "reviews": [
+    {
+      "name": "Jon",
+      "body": "No spoilers, but what a ride!"
+    },
+    {
+      "name": "Tyrion",
+      "body": "The best book in the series."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10218"
+  },
+  "title": "The Shining",
+  "author": "Stephen King",
+  "pages": 447,
+  "rating": 9,
+  "genres": [
+    "horror",
+    "thriller",
+    "psychology"
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e0500ba00bad453ce10219"
+  },
+  "title": "It",
+  "author": "Stephen King",
+  "pages": 1138,
+  "rating": 8,
+  "genres": [
+    "horror",
+    "thriller",
+    "coming-of-age"
+  ],
+  "reviews": [
+    {
+      "name": "Pennywise",
+      "body": "We all float down here."
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69e06571c3e25daf9a8c85b6"
+  },
+  "title": "The Way of Kings",
+  "author": "Brandon Sanderson",
+  "pages": 1007,
+  "rating": 10,
+  "genres": [
+    "fantasy",
+    "epic",
+    "adventure"
+  ],
+  "reviews": [],
+  "createdAt": {
+    "$date": "2026-04-16T04:28:33.953Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-16T04:28:33.953Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69e065e0c3e25daf9a8c85cf"
+  },
+  "title": "Project Hail Mary",
+  "author": "Andy Weir",
+  "pages": 476,
+  "rating": 9,
+  "genres": [
+    "sci-fi",
+    "adventure",
+    "mystery"
+  ],
+  "reviews": [
+    {
+      "name": "Kobby",
+      "body": "Absolutely brilliant, couldn't put it down!",
+      "_id": {
+        "$oid": "69e065e0c3e25daf9a8c85d0"
+      }
+    },
+    {
+      "name": "Deepmind",
+      "body": "Scientific and heartwarming at the same time.",
+      "_id": {
+        "$oid": "69e065e0c3e25daf9a8c85d1"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2026-04-16T04:30:24.631Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-16T04:30:24.631Z"
+  },
+  "__v": 0
+}]

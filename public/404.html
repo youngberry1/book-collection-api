@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Lost in Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030308;
+      --primary: #7c5cfc;
+      --primary-glow: rgba(124, 92, 252, 0.4);
+      --text: #e4e4ec;
+      --text-muted: #8888a4;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      perspective: 1000px;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+      padding: 3rem;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 40px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+    }
+
+    .glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: var(--primary);
+      filter: blur(120px);
+      opacity: 0.15;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 8s infinite alternate;
+      z-index: -1;
+    }
+
+    h1 {
+      font-size: 10rem;
+      font-weight: 900;
+      background: linear-gradient(180deg, #fff 0%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 0.9;
+      margin-bottom: 1rem;
+      letter-spacing: -5px;
+    }
+
+    h2 { font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 700; }
+    p { color: var(--text-muted); margin-bottom: 2rem; max-width: 300px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 32px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px -5px var(--primary-glow);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px -5px var(--primary-glow);
+      filter: brightness(1.1);
+    }
+
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 0.1; }
+      100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.25; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+    <h1>404</h1>
+    <h2>Oops! You're off the map.</h2>
+    <p>The page you are looking for might have been moved or doesn't exist.</p>
+    <a href="/" class="btn">Back to Reality</a>
+  </div>
+</body>
+</html>
