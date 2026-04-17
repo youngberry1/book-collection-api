@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectToDatabase } from './database/connection.js';
-import logger from './middlewares/middleware.js';
+import logger from './middlewares/logger.js';
 import bookRoutes from './routes/bookRoutes.js'
 import * as bookController from './controllers/bookController.js';
 import { disconnectFromDatabase } from './database/connection.js';

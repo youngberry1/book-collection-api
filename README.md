@@ -48,24 +48,27 @@ A professional, high-performance, and strictly-typed **Full-Stack Book Managemen
 ## 📂 Project Structure
 
 ```text
-├── assets/             # Project brand assets (banners, logos)
+├── data/               # Seed data for immediate dashboard population
+├── public/             # Static public assets
 ├── src/
 │   ├── client/         # Frontend TypeScript Source
-│   │   ├── types.ts    # Global type definitions
-│   │   ├── apiClient.ts# Smart configuration initialization
-│   │   ├── config.ts   # Typed API bridge
-│   │   └── ...         # Modular UI logic (render, form, modal)
+│   │   ├── styles/     # 🎨 Modular CSS System (vars, layout, components)
+│   │   ├── types.ts    # Global interface definitions
+│   │   ├── apiClient.ts# Smart API origin resolution
+│   │   ├── config.ts   # Typed API endpoints dictionary
+│   │   └── ...         # Modular UI logic (render, form, modal, search)
 │   └── server/         # Backend TypeScript Source
-│       ├── controllers/# Request handlers
-│       ├── services/   # Business logic
-│       ├── models/     # Mongoose schemas & interfaces
-│       ├── routes/     # API route definitions
-│       └── app.ts      # Server entry point
-├── public/             # Static assets (favicons, manifest)
-├── index.html          # Vite entry page
-├── vite.config.ts      # Environment-aware proxy & build setup
-├── tsconfig.json       # Solution-style TS configuration
-└── .env                # Environment variables (PORT, MONGO_URI)
+│       ├── controllers/# API route handlers
+│       ├── database/   # Mongoose connection logic
+│       ├── middlewares/# Error handling & request logging
+│       ├── models/     # Mongoose schemas & TypeScript interfaces
+│       ├── routes/     # Express REST endpoints
+│       ├── services/   # Core business logic & database queries
+│       └── app.ts      # Main Express initialization
+├── index.html          # Vite entry hub
+├── vite.config.ts      # Vite configuration & proxy routes
+├── tsconfig.*.json     # Solution-style TypeScript configurations
+└── package.json        # Project metadata and build scripts
 ```
 
 ---
@@ -135,4 +138,4 @@ This project is built using a **Modular Domain Pattern**. The frontend and backe
 Contributions, issues, and feature requests are welcome!
 
 ## 📝 License
-This project is [ISC](https://opensource.org/licenses/ISC) licensed.
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
