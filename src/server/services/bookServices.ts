@@ -89,14 +89,14 @@ export const createBook = async (bookData: Partial<IBook>) => {
  * @description Partially update a book using $set (PATCH).
  */
 export const updateBook = async (id: string, bookData: Partial<IBook>) => {
-    return await Book.findByIdAndUpdate(id, bookData, { new: true, runValidators: true });
+    return await Book.findByIdAndUpdate(id, bookData, { returnDocument: 'after' });
 };
 
 /**
  * @description Replace a book document entirely (PUT).
  */
 export const replaceBook = async (id: string, bookData: IBook) => {
-    return await Book.findOneAndReplace({ _id: id }, bookData, { new: true, runValidators: true });
+    return await Book.findOneAndReplace({ _id: id }, bookData, { returnDocument: 'after' });
 };
 
 /**
