@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import * as bookService from "../services/bookServices.js";
+import { sanitizeObject } from "../utils/sanitizer.js";
 
 /**
  * @description Triggers the database seeding process.
@@ -73,7 +74,8 @@ export const getBookById = async (req: Request, res: Response, next: NextFunctio
  */
 export const createBook = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const book = await bookService.createBook(req.body);
+        const sanitizedBody = sanitizeObject(req.body);
+        const book = await bookService.createBook(sanitizedBody);
         res.status(201).json(book);
     } catch (error) {
         next(error);
@@ -85,7 +87,8 @@ export const createBook = async (req: Request, res: Response, next: NextFunction
  */
 export const updateBook = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const book = await bookService.updateBook(req.params.id as string, req.body);
+        const sanitizedBody = sanitizeObject(req.body);
+        const book = await bookService.updateBook(req.params.id as string, sanitizedBody);
         if (!book) {
             return res.status(404).json({ success: false, message: "Book not found" });
         }
@@ -100,7 +103,8 @@ export const updateBook = async (req: Request, res: Response, next: NextFunction
  */
 export const replaceBook = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const book = await bookService.replaceBook(req.params.id as string, req.body);
+        const sanitizedBody = sanitizeObject(req.body);
+        const book = await bookService.replaceBook(req.params.id as string, sanitizedBody);
         if (!book) {
             return res.status(404).json({ success: false, message: "Book not found" });
         }

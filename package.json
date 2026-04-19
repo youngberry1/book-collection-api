@@ -58,6 +58,7 @@
     "@types/express": "^5.0.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "express-rate-limit": "^8.3.2",
     "mongoose": "^9.4.1"
   }
 }

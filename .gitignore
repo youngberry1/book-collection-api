@@ -27,3 +27,7 @@ yarn-error.log*
 
 # --- Debug Scripts ---
 test-seed.ts
+
+
+#Ignore cursor AI rules
+.cursor\rules\codacy.mdc

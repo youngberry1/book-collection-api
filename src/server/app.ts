@@ -6,6 +6,7 @@ import bookRoutes from './routes/bookRoutes.js'
 import * as bookController from './controllers/bookController.js';
 import { disconnectFromDatabase } from './database/connection.js';
 import { errorHandler, notFoundHandler } from './middlewares/errorMiddleware.js';
+import { apiLimiter, destructiveLimiter } from './middlewares/securityMiddleware.js';
 
 dotenv.config();
 
@@ -17,6 +18,9 @@ app.use(express.static('dist/client'));
 // Middlewares
 app.use(express.json());
 app.use(logger);
+
+// Apply Global API Rate Limiting
+app.use('/api', apiLimiter);
 
 /** API Configuration Endpoint */
 const envPort = process.env.PORT || 5000;
@@ -42,7 +46,7 @@ async function startServer() {
 }
 
 // Specific API Routes (Maintenance & Bulk)
-app.post('/api/seed', bookController.seedBooks);
+app.post('/api/seed', destructiveLimiter, bookController.seedBooks);
 app.get('/api/all', bookController.getAllBooks);
 
 // Resource Routes (Handled by bookRoutes)
